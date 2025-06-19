@@ -12,7 +12,7 @@
 
     <div class="space-y-3 mb-7 ">
     @foreach ($armadas as $armada)
-        <a href="/armada-{{ $armada->slug }}" class="p-2 flex space-x-4 bg-white dark:bg-primary-700 rounded-xl">
+        <a wire:navigate href="/armada-{{ $armada->slug }}" class="p-2 flex space-x-4 bg-white dark:bg-primary-700 rounded-xl">
             <div class="flex-none"><img src="{{ Str::replace('%2F', '/',url('storage', $armada->images[0])) }}" alt="" class="size-18 object-cover aspect-square rounded-md"></div>
             <div class="w-auto shrink">
                 <div class="font-bold dark:text-white">{{ $armada->name }}</div>
