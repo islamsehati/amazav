@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="my-6 flex items-center justify-center">
-        <img src="{{ asset('/assets/images/tsui.png') }}" />
+        <img src="{{ Str::replace('%2F', '/',url('storage', '/AmazavLOGO.png')) }}" class="size-24" />
     </div>
 
     <form method="POST" action="{{ route('register') }}">

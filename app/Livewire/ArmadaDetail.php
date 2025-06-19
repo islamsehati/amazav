@@ -8,6 +8,11 @@ use Livewire\Component;
 class ArmadaDetail extends Component
 {
     public $slug;
+    public $nama;
+    public $noWA;
+    public $tglAwal;
+    public $tglAkhir;
+    public $tujuan;
 
     public function mount($slug)
     {
