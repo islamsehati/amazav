@@ -67,12 +67,13 @@
                     </h4>
                 </x-slot:left>
                 <x-slot:right>
+                    <a href="javascript:history.back()" class="{{ request()->is('/') ? ' hidden' : '' }}  cursor-pointer mr-2 text-primary-600 dark:text-primary-200"><x-icon name="arrow-left-circle" class="size-6" /></a>
                     <x-theme-switch only-icons />
-                    <x-icon onclick="toggle_full_screen();" id="lyrpenuh" name="arrows-pointing-out" class="h-5 w-5 ml-2 cursor-pointer text-primary-600 dark:text-primary-200">
+                    <x-icon onclick="toggle_full_screen();" id="lyrpenuh" name="arrows-pointing-out" class="h-5 w-5 cursor-pointer ml-2 text-primary-600 dark:text-primary-200">
                     </x-icon>
-                    <x-icon onclick="toggle_full_screen();" id="lyrpenuhtutup" name="arrows-pointing-in" class="h-5 w-5 ml-2 cursor-pointer text-primary-600 dark:text-primary-200 hidden">
+                    <x-icon onclick="toggle_full_screen();" id="lyrpenuhtutup" name="arrows-pointing-in" class="h-5 w-5 cursor-pointer ml-2 text-primary-600 dark:text-primary-200 hidden">
                     </x-icon>
-                    <x-icon x-on:click="$dispatch('tallstackui-menu-mobile', { status : true })" name="bars-3" class="size-7 ml-2 cursor-pointer text-primary-600 dark:text-primary-200">
+                    <x-icon x-on:click="$dispatch('tallstackui-menu-mobile', { status : true })" name="bars-3" class="size-7 cursor-pointer ml-2 text-primary-600 dark:text-primary-200">
                     </x-icon>
                 </x-slot:right>
             </x-layout.header>
