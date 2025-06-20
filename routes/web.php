@@ -5,6 +5,7 @@ use App\Livewire\Armada\Index as ArmadaIndex;
 use App\Livewire\ArmadaDetail as ArmadaDetail;
 use App\Livewire\Armada\Create as ArmadaCreate;
 use App\Livewire\Armada\Update as ArmadaUpdate;
+use App\Livewire\Schedule\Index as ScheduleIndex;
 use App\Livewire\Catatan\CatatanDetail;
 use App\Livewire\Catatan\Index as CatatanIndex;
 use App\Livewire\User\Profile;
@@ -20,6 +21,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/armada', ArmadaIndex::class)->name('armada.index');
     Route::get('/armada/create', ArmadaCreate::class)->name('armada.create');
     Route::get('/armada/{armadaid}', ArmadaUpdate::class)->name('armada.show');
+
+    Route::get('/jadwal', ScheduleIndex::class)->name('schedule.index');
 
     Route::get('/users', Index::class)->name('users.index');
     Route::get('/catatan', CatatanIndex::class)->name('catatan.index');

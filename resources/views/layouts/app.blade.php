@@ -109,14 +109,14 @@
                         <x-badge text="{{ $CountUsers }}" color="amber" outline class="absolute right-6 mt-2.5" />
                         @endauth
                     </div> 
-                    <div class="flex flex-nowrap">
+                    {{-- <div class="flex flex-nowrap">
                         <div class="w-full">
                             <x-side-bar.item text="Catatan" icon="document-text" :route="route('catatan.index')" />
                         </div>
                         @auth
                         <x-badge text="{{ $CountCatatan }}" color="amber" outline class="absolute right-6 mt-2.5" />
                         @endauth
-                    </div>
+                    </div> --}}
                 </x-side-bar.item>
                 @endif
                 @endauth
