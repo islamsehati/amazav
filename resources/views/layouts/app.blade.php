@@ -104,20 +104,20 @@
                     </div>
                     <div class="flex flex-nowrap">
                         <div class="w-full">
-                            <x-side-bar.item text="Users" icon="users" :route="route('users.index')"/>
-                        </div>
-                        @auth
-                        <x-badge text="{{ $CountUsers }}" color="amber" outline class="absolute right-6 mt-2.5" />
-                        @endauth
-                    </div> 
-                    <div class="flex flex-nowrap">
-                        <div class="w-full">
                             <x-side-bar.item text="Jadwal" icon="document-text" :route="route('schedule.index')" />
                         </div>
                         @auth
                         <x-badge text="{{ $CountJadwal }}" color="amber" outline class="absolute right-6 mt-2.5" />
                         @endauth
                     </div>
+                    <div class="flex flex-nowrap">
+                        <div class="w-full">
+                            <x-side-bar.item text="Users" icon="users" :route="route('users.index')"/>
+                        </div>
+                        @auth
+                        <x-badge text="{{ $CountUsers }}" color="amber" outline class="absolute right-6 mt-2.5" />
+                        @endauth
+                    </div> 
                     {{-- <div class="flex flex-nowrap">
                         <div class="w-full">
                             <x-side-bar.item text="Catatan" icon="document-text" :route="route('catatan.index')" />
