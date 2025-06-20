@@ -46,6 +46,7 @@
         if (Auth::check()) {
             $userPhoto = auth()->user()->photo;
             $CountUsers = App\Models\User::whereNotIn('id', [Auth::id()])->count();
+            $CountJadwal = App\Models\Schedule::count();
             $CountCatatan = App\Models\Catatan::count();
             }
         @endphp
@@ -109,6 +110,14 @@
                         <x-badge text="{{ $CountUsers }}" color="amber" outline class="absolute right-6 mt-2.5" />
                         @endauth
                     </div> 
+                    <div class="flex flex-nowrap">
+                        <div class="w-full">
+                            <x-side-bar.item text="Jadwal" icon="document-text" :route="route('schedule.index')" />
+                        </div>
+                        @auth
+                        <x-badge text="{{ $CountJadwal }}" color="amber" outline class="absolute right-6 mt-2.5" />
+                        @endauth
+                    </div>
                     {{-- <div class="flex flex-nowrap">
                         <div class="w-full">
                             <x-side-bar.item text="Catatan" icon="document-text" :route="route('catatan.index')" />
